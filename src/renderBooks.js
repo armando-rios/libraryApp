@@ -1,28 +1,10 @@
 export const renderBooks = () => {
-  let books = [
-    {
-      title: "El gran Gatsby",
-      author: "F. Scott Fitzgerald",
-      pages: 180
-    },
-    {
-      title: "Orgullo y prejuicio",
-      author: "Jane Austen",
-      pages: 279
-    },
-    {
-      title: "El principito",
-      author: "Antoine de Saint-Exupéry",
-      pages: 96
-    },
-    {
-      title: "La sombra del viento",
-      author: "Carlos Ruiz Zafón",
-      pages: 486
-    },
-  ];
 
   const library = document.querySelector("#library")
+
+  const books = JSON.parse(localStorage.getItem("books"))
+
+  library.innerHTML = ""
 
   books.forEach((book) => {
     library.innerHTML += `
