@@ -1,12 +1,12 @@
 export const addBook = () => {
   // Obtener elementos
   const modal = document.getElementById("myModal");
-  const btn = document.getElementById("addBook");
   const closeBtn = document.getElementById("closeModalBtn");
 
   modal.classList.remove("hidden");
   modal.classList.add("flex");
 
+  console.log("works")
   // Cerrar el modal cuando el usuario haga clic en el botón de cierre (X)
   closeBtn.onclick = function() {
     modal.classList.add("hidden");

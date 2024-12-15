@@ -22,14 +22,14 @@
       </button>
     </div>
   </header>
-  <div id="library" class="flex justify-between py-8 gap-4"></div>
+  <div id="library" class="flex justify-center flex-wrap py-8 gap-8"></div>
   <div id="myModal" class="fixed inset-0 bg-gray-700 bg-opacity-50 hidden justify-center items-center z-50">
     <div class="flex flex-col p-8 bg-[#1c1b22] rounded-lg sm:w-96 relative">
       <div class="flex justify-between items-center mb-4">
         <p class="font-bold text-xl">Add New Book</p>
         <i id="closeModalBtn" class="fa-solid fa-xmark text-xl cursor-pointer p-2"></i>
       </div>
-      <form class="flex flex-col gap-1" id="newBookForm">
+      <form class="flex flex-col gap-1" id="addBookForm">
         <label for="title">Title</label>
         <input id="title" class="p-2 rounded-lg w-full text-lg font-bold" />
         <label for="author">Author</label>
