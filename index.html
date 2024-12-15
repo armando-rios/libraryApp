@@ -8,7 +8,7 @@
   <title>Vite App</title>
 </head>
 
-<body class="py-8 lg:w-4/6 m-auto">
+<body class="py-8 max-md:p-6 md:w-4/6 m-auto">
   <header class="flex justify-between center">
     <div class="flex items-center gap-2 text-2xl">
       <i class="fa-regular fa-bookmark text-purple-600 p-2 bg-purple-500/10 rounded-lg text-center"></i>
@@ -22,21 +22,21 @@
       </button>
     </div>
   </header>
-  <div id="app"></div>
+  <div id="library" class="flex justify-between py-8 gap-4"></div>
   <div id="myModal" class="fixed inset-0 bg-gray-700 bg-opacity-50 hidden justify-center items-center z-50">
     <div class="flex flex-col p-8 bg-[#1c1b22] rounded-lg sm:w-96 relative">
       <div class="flex justify-between items-center mb-4">
         <p class="font-bold text-xl">Add New Book</p>
         <i id="closeModalBtn" class="fa-solid fa-xmark text-xl cursor-pointer p-2"></i>
       </div>
-      <form class="flex flex-col gap-1">
-        <label>Title</label>
-        <input class="p-2 rounded-lg w-full text-lg font-bold" />
-        <label>Author</label>
-        <input class="p-2 rounded-lg w-full text-lg font-bold" />
-        <label>Pages</label>
-        <input class="p-2 rounded-lg w-full text-lg font-bold" />
-        <button class="p-2 bg-purple-600 rounded-lg mt-4 font-bold">Add Book</button>
+      <form class="flex flex-col gap-1" id="newBookForm">
+        <label for="title">Title</label>
+        <input id="title" class="p-2 rounded-lg w-full text-lg font-bold" />
+        <label for="author">Author</label>
+        <input id="author" class="p-2 rounded-lg w-full text-lg font-bold" />
+        <label for="pages">Pages</label>
+        <input id="pages" class="p-2 rounded-lg w-full text-lg font-bold" type="number" />
+        <button type="submit" class="p-2 bg-purple-600 rounded-lg mt-4 font-bold">Add Book</button>
       </form>
     </div>
   </div>
