@@ -23,6 +23,23 @@
     </div>
   </header>
   <div id="app"></div>
+  <div id="myModal" class="fixed inset-0 bg-gray-700 bg-opacity-50 hidden justify-center items-center z-50">
+    <div class="flex flex-col p-8 bg-[#1c1b22] rounded-lg sm:w-96 relative">
+      <div class="flex justify-between items-center mb-4">
+        <p class="font-bold text-xl">Add New Book</p>
+        <i id="closeModalBtn" class="fa-solid fa-xmark text-xl cursor-pointer p-2"></i>
+      </div>
+      <form class="flex flex-col gap-1">
+        <label>Title</label>
+        <input class="p-2 rounded-lg w-full text-lg font-bold" />
+        <label>Author</label>
+        <input class="p-2 rounded-lg w-full text-lg font-bold" />
+        <label>Pages</label>
+        <input class="p-2 rounded-lg w-full text-lg font-bold" />
+        <button class="p-2 bg-purple-600 rounded-lg mt-4 font-bold">Add Book</button>
+      </form>
+    </div>
+  </div>
   <script type="module" src="/src/main.js"></script>
 </body>
 
