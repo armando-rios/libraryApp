@@ -1,5 +1,4 @@
 import { addBook } from './addBook'
-import { newBook } from './newBook'
 import { renderBooks } from './renderBooks'
 import './style.css'
 import '@fortawesome/fontawesome-free/css/all.css'
