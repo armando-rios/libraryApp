@@ -1,5 +1,6 @@
 import { addBook } from './addBook'
 import { createBook } from './createBook'
+import { deleteBook } from './deleteBook'
 import { renderBooks } from './renderBooks'
 import './style.css'
 import '@fortawesome/fontawesome-free/css/all.css'
@@ -33,4 +34,14 @@ addBookForm.addEventListener("submit", (event) => {
 
   modal.classList.add("hidden");
   modal.classList.remove("flex");
+})
+
+const library = document.querySelector("#library")
+
+library.addEventListener("click", (e) => {
+  if (e.target.classList.contains('delete-btn')) {
+    const bookId = e.target.dataset.bookId
+    deleteBook(bookId)
+    renderBooks()
+  }
 })
