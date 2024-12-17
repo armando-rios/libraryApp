@@ -2,6 +2,9 @@ export const renderBooks = () => {
 
   const library = document.querySelector("#library")
 
+  const yes = '<i class="fa-solid fa-toggle-on text-2xl"></i>'
+  const no = '<i class="fa-solid fa-toggle-off text-2xl"></i>'
+
   const books = JSON.parse(localStorage.getItem("books"))
 
   library.innerHTML = ""
@@ -24,6 +27,10 @@ export const renderBooks = () => {
       </div>
       <div class="flex mt-6 gap-4">
         <button class="text-2xl hover:scale-125 duration-200 text-red-500 text-center"><i data-book-id="${book.id}" class="delete-btn fa-solid fa-trash"></i></button>
+        <button class="flex items-center gap-2">
+          <p>READ</p>
+        ${book.read ? yes : no}
+        </button>
       </div>
     </div>
 `
