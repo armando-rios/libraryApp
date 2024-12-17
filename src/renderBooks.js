@@ -26,7 +26,7 @@ export const renderBooks = () => {
 <p>${book.pages}</p>
       </div>
       <div class="flex mt-6 gap-4">
-        <button class="text-2xl hover:scale-125 duration-200 text-red-500 text-center"><i data-book-id="${book.id}" class="delete-btn fa-solid fa-trash"></i></button>
+        <button class="text-2xl hover:scale-125 hover:-rotate-12 duration-200 text-red-500 text-center"><i data-book-id="${book.id}" class="delete-btn fa-solid fa-trash"></i></button>
         <button class="flex items-center gap-2">
           <p>READ</p>
         ${book.read ? yes : no}
