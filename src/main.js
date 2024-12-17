@@ -19,10 +19,18 @@ addBookBtn.addEventListener("click", () => {
 const addBookForm = document.querySelector("#addBookForm")
 
 addBookForm.addEventListener("submit", (event) => {
+  event.preventDefault()
 
   const title = document.querySelector("#title").value
   const author = document.querySelector("#author").value
   const pages = document.querySelector("#pages").value
 
   createBook(title, author, pages)
+
+  renderBooks()
+
+  const modal = document.getElementById("myModal");
+
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
 })
