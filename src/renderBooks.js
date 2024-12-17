@@ -2,14 +2,14 @@ export const renderBooks = () => {
 
   const library = document.querySelector("#library")
 
-  const yes = '<i class="fa-solid fa-toggle-on text-2xl"></i>'
-  const no = '<i class="fa-solid fa-toggle-off text-2xl"></i>'
 
   const books = JSON.parse(localStorage.getItem("books"))
 
   library.innerHTML = ""
 
   books.forEach((book) => {
+    const yes = `<i data-book-id="${book.id}" class="read-btn fa-solid fa-toggle-on text-2xl"></i>`
+    const no = `<i data-book-id="${book.id}" class="read-btn fa-solid fa-toggle-off text-2xl"></i>`
     library.innerHTML += `
     <div
       class="flex flex-col justify-between px-4 py-6 w-64 bg-zinc-800 shadow-purple-600 hover:shadow-purple-500 shadow-md hover:shadow-lg duration-200 rounded-lg">
