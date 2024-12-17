@@ -27,10 +27,11 @@ addBookForm.addEventListener("submit", (event) => {
   const pages = document.querySelector("#pages").value
 
   createBook(title, author, pages)
-
   renderBooks()
 
   const modal = document.getElementById("myModal");
+
+  addBookForm.reset()
 
   modal.classList.add("hidden");
   modal.classList.remove("flex");
