@@ -1,6 +1,7 @@
 import { addBook } from './addBook'
 import { createBook } from './createBook'
 import { deleteBook } from './deleteBook'
+import { readBook } from './readBook'
 import { renderBooks } from './renderBooks'
 import './style.css'
 import '@fortawesome/fontawesome-free/css/all.css'
@@ -43,6 +44,14 @@ library.addEventListener("click", (e) => {
   if (e.target.classList.contains('delete-btn')) {
     const bookId = e.target.dataset.bookId
     deleteBook(bookId)
+    renderBooks()
+  }
+})
+
+library.addEventListener("click", (e) => {
+  if (e.target.classList.contains('read-btn')) {
+    const bookId = e.target.dataset.bookId
+    readBook(bookId)
     renderBooks()
   }
 })
