@@ -6,9 +6,10 @@ function Book(id, title, author, pages) {
   this.read = false
 }
 
-const books = JSON.parse(localStorage.getItem("books"))
-
 export function createBook(title, author, pages) {
+
+  const books = JSON.parse(localStorage.getItem("books"))
+
   const generateId = () => {
     const timestamp = ((new Date().getTime() / 1000) | 0).toString(16);
     const randomness = Math.random().toString(16).substring(2, 8);
