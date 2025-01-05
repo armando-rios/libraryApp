@@ -6,9 +6,7 @@ function Book(id, title, author, pages) {
   this.read = false
 }
 
-export function createBook(title, author, pages) {
-
-  const books = JSON.parse(localStorage.getItem("books"))
+export function createBook(title, author, pages, books) {
 
   const generateId = () => {
     const timestamp = ((new Date().getTime() / 1000) | 0).toString(16);

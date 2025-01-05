@@ -9,8 +9,11 @@ import '@fortawesome/fontawesome-free/css/all.css'
 if (localStorage.getItem("books") === null) {
   localStorage.setItem("books", JSON.stringify([]))
 }
+const books = () => {
+  return JSON.parse(localStorage.getItem("books"))
+}
 
-renderBooks()
+renderBooks(books())
 
 const addBookBtn = document.querySelector("#addBook")
 
@@ -27,8 +30,8 @@ addBookForm.addEventListener("submit", (event) => {
   const author = document.querySelector("#author").value
   const pages = document.querySelector("#pages").value
 
-  createBook(title, author, pages)
-  renderBooks()
+  createBook(title, author, pages, books())
+  renderBooks(books())
 
   const modal = document.getElementById("myModal");
 
@@ -43,15 +46,15 @@ const library = document.querySelector("#library")
 library.addEventListener("click", (e) => {
   if (e.target.classList.contains('delete-btn')) {
     const bookId = e.target.dataset.bookId
-    deleteBook(bookId)
-    renderBooks()
+    deleteBook(bookId, books())
+    renderBooks(books())
   }
 })
 
 library.addEventListener("click", (e) => {
   if (e.target.classList.contains('read-btn')) {
     const bookId = e.target.dataset.bookId
-    readBook(bookId)
-    renderBooks()
+    readBook(bookId, books())
+    renderBooks(books())
   }
 })
