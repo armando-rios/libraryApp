@@ -1,9 +1,6 @@
-export const renderBooks = () => {
+export const renderBooks = (books) => {
 
   const library = document.querySelector("#library")
-
-
-  const books = JSON.parse(localStorage.getItem("books"))
 
   library.innerHTML = ""
 

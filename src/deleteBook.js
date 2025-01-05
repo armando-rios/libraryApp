@@ -1,5 +1,4 @@
-export const deleteBook = (id) => {
-  const books = JSON.parse(localStorage.getItem("books"))
+export const deleteBook = (id, books) => {
   const newBook = books.filter((book) => book.id != id)
   localStorage.setItem("books", JSON.stringify(newBook))
 }
