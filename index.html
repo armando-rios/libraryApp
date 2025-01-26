@@ -27,17 +27,25 @@
   <div id="myModal" class="fixed inset-0 bg-gray-700 bg-opacity-50 hidden justify-center items-center z-50">
     <div class="flex flex-col p-8 bg-[#1c1b22] rounded-lg sm:w-96 relative">
       <div class="flex justify-between items-center mb-4">
-        <p class="font-bold text-xl">Add New Book</p>
-        <i id="closeModalBtn" class="fa-solid fa-xmark text-xl cursor-pointer p-2"></i>
+        <p class="font-bold text-xl text-white">Add New Book</p>
+        <i id="closeModalBtn" class="fa-solid fa-xmark text-xl text-white cursor-pointer p-2"></i>
       </div>
-      <form class="flex flex-col gap-1" id="addBookForm">
-        <label for="title">Title</label>
-        <input id="title" class="p-2 rounded-lg w-full text-lg font-bold" />
-        <label for="author">Author</label>
-        <input id="author" class="p-2 rounded-lg w-full text-lg font-bold" />
-        <label for="pages">Pages</label>
-        <input id="pages" class="p-2 rounded-lg w-full text-lg font-bold" type="number" />
-        <button type="submit" class="p-2 bg-purple-600 rounded-lg mt-4 font-bold">Add Book</button>
+      <form class="flex flex-col gap-4" id="addBookForm">
+        <label for="title" class="text-white">Title</label>
+        <input id="title"
+          class="p-2 rounded-lg w-full text-lg font-bold bg-[#2d2d34] text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600" />
+
+        <label for="author" class="text-white">Author</label>
+        <input id="author"
+          class="p-2 rounded-lg w-full text-lg font-bold bg-[#2d2d34] text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600" />
+
+        <label for="pages" class="text-white">Pages</label>
+        <input id="pages"
+          class="p-2 rounded-lg w-full text-lg font-bold bg-[#2d2d34] text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600"
+          type="number" />
+
+        <button type="submit" class="p-2 bg-purple-600 rounded-lg mt-4 font-bold text-white hover:bg-purple-700">Add
+          Book</button>
       </form>
     </div>
   </div>
